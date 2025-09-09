@@ -358,15 +358,15 @@ ServerEvents.recipes(allthemods => {
     // generate lumber and quarry bee recipes
     let lumberBlocks = Ingredient.of('#productivebees:flowers/lumber').getItemIds()
     let quarryBlocks = Ingredient.of('#productivebees:flowers/quarry').getItemIds()
-    let lumberBee = Item.of('productivebees:bee_cage', 1, goodBeeGenes + 'entity: "productivebees:lumber_bee"}')
-    let quarryBee = Item.of('productivebees:bee_cage', 1, goodBeeGenes + 'entity: "productivebees:quarry_bee"}')
+    let lumberbee = Item.of('productivebees:bee_cage', 1, goodBeeGenes + 'entity: "productivebees:lumber_bee"}')
+    let quarrybee = Item.of('productivebees:bee_cage', 1, goodBeeGenes + 'entity: "productivebees:quarry_bee"}')
 
     lumberBlocks.forEach(lumberBlock => {
-        makeCircuitRecipes('kubejs:gtceu/apiary_ii/lumberBee/' + lumberBlock.split(':')[0] + '/' + lumberBlock.split(':')[1], lumberBee, lumberBlock, [{item: Item.of(lumberBlock), chance: 10000}])
+        makeCircuitRecipes('kubejs:gtceu/apiary_ii/lumberbee/' + lumberBlock.split(':')[0] + '/' + lumberBlock.split(':')[1], lumberbee, lumberBlock, [{item: Item.of(lumberBlock), chance: 10000}])
     })
 
     quarryBlocks.forEach(quarryBlock => {
-        makeCircuitRecipes('kubejs:gtceu/apiary_ii/quarryBee/' + quarryBlock.split(':')[0] + '/' + quarryBlock.split(':')[1], quarryBee, quarryBlock, [{item: Item.of(quarryBlock), chance: 10000}])
+        makeCircuitRecipes('kubejs:gtceu/apiary_ii/quarrybee/' + quarryBlock.split(':')[0] + '/' + quarryBlock.split(':')[1], quarrybee, quarryBlock, [{item: Item.of(quarryBlock), chance: 10000}])
     })
 
     // copy all centrifuge recipes
