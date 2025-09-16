@@ -19,7 +19,7 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             .where("E", Predicates.heatingCoils())
             .where("F", Predicates.blocks("gtceu:hp_steam_solid_boiler"))
             .where("G", Predicates.abilities(PartAbility.MUFFLER).setExactLimit(1))
-            .where('H', Predicates.blocks('gtceu:clean_machine_casing').setMinGlobalLimited(10) 
+            .where('H', Predicates.blocks('gtceu:clean_machine_casing').setMinGlobalLimited(4) 
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
                 .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                 .or(Predicates.autoAbilities(definition.getRecipeTypes())))
